@@ -1,6 +1,41 @@
 var correctAnswers;
+var hour = 0;
+var sec = 30;
 
 
+
+function score() {
+    document.getElementById("quizDisplay").innerHTML = ("You got " + correctAnswers + " correct answers and "
+        + incorrectAnswers + " incorrect answers");
+    document.getElementById("quizDisplay").style.fontSize = "50px";
+    document.getElementById("quizDisplay").style.width = "40%";
+    document.getElementById("quizDisplay").style.backgroundColor = "blue";
+    document.getElementById("submitButton").innerHTML + "Reset";
+
+    $("#submitButton").click(function () {
+        reset();
+
+    })
+
+
+
+
+}
+
+function timer() {
+    window.onload = function () {
+
+        setInterval(function () {
+            document.getElementById("timer").innerHTML = hour + " : " + sec;
+            sec--;
+
+        }, 1000);
+    }
+
+    if (sec <= 0) {
+        clearInterval();
+    }
+}
 
 
 $(document).ready(function () {
@@ -9,37 +44,21 @@ $(document).ready(function () {
         incorrectAnswers = 0;
     }
 
-    function score () {
-        document.getElementById("quizDisplay").innerHTML = ("You got " + correctAnswers + " correct answers and "
-        + incorrectAnswers + " incorrect answers");
-    }
-
-    function timer () {
-        window.onload = function() {
-            var hour = 0;
-            var sec = 30;
-            setInterval(function() {
-              document.getElementById("timer").innerHTML = hour + " : " + sec;
-              sec--;
-              if (sec == 00) {
-                hour--;
-                sec = 60;
-                if (hour == 0) {
-                  hour = 2;
-                }
-              }
-            }, 1000);
-          }
-    }
- 
     reset();
+
+
+
+
+
+
+
     timer();
     $("#correct1").click(function () {
         correctAnswers++;
         console.log("correct: " + correctAnswers);
         $("#correct1").css("background-color", "green");
         $("#incorrect1").css("background-color", "red");
-        
+
     });
 
     $("#incorrect1").click(function () {
@@ -55,7 +74,7 @@ $(document).ready(function () {
         console.log("correct: " + correctAnswers);
         $("#correct2").css("background-color", "green");
         $("#incorrect2").css("background-color", "red");
-        
+
     });
 
     $("#incorrect2").click(function () {
@@ -73,7 +92,7 @@ $(document).ready(function () {
         console.log("correct: " + correctAnswers);
         $("#correct3").css("background-color", "green");
         $("#incorrect3").css("background-color", "red");
-        
+
     });
 
     $("#incorrect3").click(function () {
@@ -89,7 +108,7 @@ $(document).ready(function () {
         console.log("correct: " + correctAnswers);
         $("#correct4").css("background-color", "green");
         $("#incorrect4").css("background-color", "red");
-        
+
     });
 
     $("#incorrect4").click(function () {
@@ -107,7 +126,7 @@ $(document).ready(function () {
         console.log("correct: " + correctAnswers);
         $("#correct5").css("background-color", "green");
         $("#incorrect5").css("background-color", "red");
-        
+
     });
 
     $("#incorrect5").click(function () {
@@ -123,7 +142,7 @@ $(document).ready(function () {
         console.log("correct: " + correctAnswers);
         $("#correct6").css("background-color", "green");
         $("#incorrect6").css("background-color", "red");
-        
+
     });
 
     $("#incorrect6").click(function () {
@@ -141,7 +160,7 @@ $(document).ready(function () {
         console.log("correct: " + correctAnswers);
         $("#correct7").css("background-color", "green");
         $("#incorrect7").css("background-color", "red");
-        
+
     });
 
     $("#incorrect7").click(function () {
@@ -157,7 +176,7 @@ $(document).ready(function () {
         console.log("correct: " + correctAnswers);
         $("#correct8").css("background-color", "green");
         $("#incorrect8").css("background-color", "red");
-        
+
     });
 
     $("#incorrect8").click(function () {
@@ -169,11 +188,11 @@ $(document).ready(function () {
     });
 
     $("#submitButton").click(function () {
-        score ();
-        });
+        score();
+    });
 
 
-      //  setTimeout(function score(), 3000);
+    setTimeout(score, 32000);
 
 
 
