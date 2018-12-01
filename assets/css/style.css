@@ -3,6 +3,8 @@ body {
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: 100% 100%;
+    color: darkcyan;
+    background-color: blue;
 }
 
 #quizDisplay {
@@ -12,16 +14,17 @@ body {
 }
 
 #nameHeader {
-    background-color: tan;
+    background-color: royalblue;
     width: 80%;
     min-width: 200px;
     margin-left: auto;
     margin-right: auto;
+    color: white; 
 }
 
 .incorrectQuestion, .correctQuestion {
-    background-color: darkblue;
-    color: peachpuff;
+    background-color: lightblue;
+    color: black;
     width: 12%;
     height: 75px;
     line-height: 75px;
@@ -34,7 +37,7 @@ body {
 }
 
 #submitButton {
-    background-color: brown;
+    background-color: aqua;
     height: 75px;
     width: 175px;
     line-height: 75px;
@@ -46,7 +49,6 @@ body {
 .questionDisplays {
     display: flex;
     flex-direction: row;
-    
     width: 50%;
     margin-left: auto;
     margin-right: auto;
@@ -59,11 +61,27 @@ body {
 }
 
 .correctQuestion:hover{
-    background-color: black;    
+    background-color: darkblue;    
 }
 .incorrectQuestion:hover {
-    background-color: black;
+    background-color: darkblue;
+}
+#submitButton:hover {
+    background-color: darkblue;
 }
 
+#timeDisplay, instructions {
+    color: grey;
+}
 
+#instructions {
+    color: black;
+}
+
+.question {
+    background-color: white;
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+}
 
