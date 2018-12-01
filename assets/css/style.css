@@ -22,7 +22,7 @@ body {
 .question, .correctQuestion {
     background-color: darkblue;
     color: peachpuff;
-    width: 10%;
+    width: 12%;
     height: 75px;
     line-height: 75px;
     min-width: 100px;
@@ -44,12 +44,19 @@ body {
 .questionDisplays {
     display: flex;
     flex-direction: row;
+    background-color: yellow;
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
     
 }
 
 #answer34, #answer54, #answer51, #answer31, #answer33, #answer52 {
-   font-size: 14px;
+   font-size: 18px;
+   line-height: 30px;
 }
+
+
 
 
 
