@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <script src="../assets/javascript/app.js"></script>
     <link rel="stylesheet" type="text/css" href="../assets/css/style.css">
     <title>The Office Quiz</title>
@@ -13,70 +14,69 @@
 
 <body>
     <div id="quizDisplay">
-        <h1 id="nameHeader">The Office Quiz!</h1>
+        <h1 id="nameHeader">The Office Quiz
+        <h2>Time left: <span id="timer">0 : 30</span></h2>    
+        </h1>
         <p id="Instructions">Read the question and select the right answer. Unanswered questions will count as
             incorrect!</p>
-        <h3 id="question1">What is Michael Scott's middle name?</h3>
+        <h3 id="question1">Michael Scott's middle name is Gary</h3>
         <div class="questionDisplays">
-            <p class="question" id="answer11">Beesly</p>
-            <p class="question" id="answer12">Danger</p>
-            <p class="correctQuestion" id="answer13">Gary</p>
-            <p class="question" id="answer14">Scarn</p>
-        </div>
-        <h3 id="question">What does Bob Vance sell?</h3>
-        <div class="questionDisplays">
-            <p class="correctQuestion" id="answer21">Refridgerators</p>
-            <p class="question" id="answer22">Laptop batteries</p>
-            <p class="question" id="answer23">Computers</p>
-            <p class="question" id="answer24">dundies</p>
-        </div>
-        <h3 id="question">Where do Jim and Pam get married?</h3>
-        <div class="questionDisplays">
+            <p class="correctQuestion" id="correct1">True</p>
+            <p class="explination" id="explination1"></p>
+            <p class="incorrectQuestion" id="incorrect1">False</p>
 
-            <p class="question" id="answer31">The Grand Canyon</p>
-            <p class="correctQuestion" id="answer32">Niagra Falls</p>
-            <p class="question" id="answer33">A church in Scranton</p>
-            <p class="question" id="answer34">Laverne's Pie Stand</p>
         </div>
-        <h3 id="question">Who plays the antagonist in Michael's movie 'Threat Level Midnight?</h3>
+        <h3 id="question2">Bob Vance sells plumbing supplies</h3>
         <div class="questionDisplays">
+            <p class="incorrectQuestion" id="incorrect2">True</p>
+            <p class="explination" id="explination2"></p>
+            <p class="correctQuestion" id="correct2">False</p>
 
-            <p class="correctQuestion" id="answer41">Jim</p>
-            <p class="question" id="answer42">Toby</p>
-            <p class="question" id="answer43">David Wallace</p>
-            <p class="question" id="answer44">Karen</p>
+
         </div>
-        <h3 id="question">In the early seasons, what is the name of Kevin's band?</h3>
+        <h3 id="question3">Jim and Pam get married at the Grand Canyon</h3>
         <div class="questionDisplays">
+            <p class="incorrectQuestion" id="incorrect3">True</p>
+            <p class="explination" id="explination3"></p>
+            <p class="correctQuestion" id="correct3">False</p>
 
-            <p class="question" id="answer51">Kevin and the zits</p>
-            <p class="question" id="answer52">The Big Mac idea</p>
-            <p class="correctQuestion" id="answer53">Scrantonicity</p>
-            <p class="question" id="answer54">American Pie Music</p>
+
         </div>
-        <h3 id="question">What's the worst part about prison?</h3>
+        <h3 id="question4">Toby plays the antagonist in Michael's movie: Threat level midnight</h3>
         <div class="questionDisplays">
+            <p class="incorrectQuestion" id="incorrect4">True</p>
+            <p class="explination" id="explination4"></p>
+            <p class="correctQuestion" id="correct4">False</p>
 
-            <p class="question" id="answer61">Food</p>
-            <p class="question" id="answer62">Guards</p>
-            <p class="question" id="answer63">Dragons</p>
-            <p class="correctQuestion" id="answer64">Dementors</p>
+
         </div>
-        <h3 id="question">Fill in the blank: Lord, ____ me strength</h3>
+        <h3 id="question5">In the early seasons of the show, Kevin's band is named Scrantonicity</h3>
         <div class="questionDisplays">
+            <p class="correctQuestion" id="correct5">True</p>
+            <p class="explination" id="explination5"></p>
+            <p class="incorrectQuestion" id="incorrect5">False</p>
 
-            <p class="question" id="answer71">give</p>
-            <p class="correctQuestion" id="answer72">beer</p>
-            <p class="question" id="answer73">get</p>
-            <p class="question" id="answer74">float</p>
+
         </div>
-        <h3 id="question">How much $$$ was Michael Scott's plasma TV?</h3>
+        <h3 id="question6">You're supposed to do CPR to the beat of "I will survive" by Gloria Gaynor</h3>
         <div class="questionDisplays">
+            <p class="incorrectQuestion" id="incorrect6">True</p>
+            <p class="explination" id="explination6"></p>
+            <p class="correctQuestion" id="correct6">False</p>
 
-            <p class="question" id="answer81">Free</p>
-            <p class="correctQuestion" id="answer82">$200</p>
-            <p class="question" id="answer83">$500</p>
-            <p class="question" id="answer84">$800</p>
+        </div>
+        <h3 id="question7">Stanley Hudson has a mustache</h3>
+        <div class="questionDisplays">
+            <p class="correctQuestion" id="correct7">True</p>
+            <p class="explination" id="explination7"></p>
+            <p class="incorrectQuestion" id="incorrect7">False</p>
+
+        </div>
+        <h3 id="question8">Jan's candle company is named "Serenity by Jan"</h3>
+        <div class="questionDisplays">
+            <p class="correctQuestion" id="correct8">True</p>
+            <p class="explination" id="explination8"></p>
+            <p class="incorrectQuestion" id="incorrect8">False</p>
         </div>
 
         <h2 id="submitButton">Submit</h2>

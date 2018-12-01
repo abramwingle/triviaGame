@@ -1,12 +1,7 @@
-var q1a = false;
-var q2a = false;
-var q3a = false;
-var q4a = false;
-var q5a = false;
-var q6a = false;
-var q7a = false;
-var q8a = false;
 var correctAnswers;
+
+
+
 
 $(document).ready(function () {
     function reset() {
@@ -14,24 +9,175 @@ $(document).ready(function () {
         incorrectAnswers = 0;
     }
 
-    reset();
+    function score () {
+        document.getElementById("quizDisplay").innerHTML = ("You got " + correctAnswers + " correct answers and "
+        + incorrectAnswers + " incorrect answers");
+    }
 
-    $(".correctQuestion").click(function () {
+    function timer () {
+        window.onload = function() {
+            var hour = 0;
+            var sec = 30;
+            setInterval(function() {
+              document.getElementById("timer").innerHTML = hour + " : " + sec;
+              sec--;
+              if (sec == 00) {
+                hour--;
+                sec = 60;
+                if (hour == 0) {
+                  hour = 2;
+                }
+              }
+            }, 1000);
+          }
+    }
+ 
+    reset();
+    timer();
+    $("#correct1").click(function () {
         correctAnswers++;
         console.log("correct: " + correctAnswers);
-        $(".correctQuestion").css("background-color", "Green")
+        $("#correct1").css("background-color", "green");
+        $("#incorrect1").css("background-color", "red");
+        
     });
 
-    $(".question").click(function () {
+    $("#incorrect1").click(function () {
         incorrectAnswers++;
         console.log("incorrect: " + incorrectAnswers);
+        $("#correct1").css("background-color", "green");
+        $("#incorrect1").css("background-color", "red");
+
+    });
+
+    $("#correct2").click(function () {
+        correctAnswers++;
+        console.log("correct: " + correctAnswers);
+        $("#correct2").css("background-color", "green");
+        $("#incorrect2").css("background-color", "red");
+        
+    });
+
+    $("#incorrect2").click(function () {
+        incorrectAnswers++;
+        console.log("incorrect: " + incorrectAnswers);
+        $("#correct2").css("background-color", "green");
+        $("#incorrect2").css("background-color", "red");
 
     });
 
 
+
+    $("#correct3").click(function () {
+        correctAnswers++;
+        console.log("correct: " + correctAnswers);
+        $("#correct3").css("background-color", "green");
+        $("#incorrect3").css("background-color", "red");
+        
+    });
+
+    $("#incorrect3").click(function () {
+        incorrectAnswers++;
+        console.log("incorrect: " + incorrectAnswers);
+        $("#correct3").css("background-color", "green");
+        $("#incorrect3").css("background-color", "red");
+
+    });
+
+    $("#correct4").click(function () {
+        correctAnswers++;
+        console.log("correct: " + correctAnswers);
+        $("#correct4").css("background-color", "green");
+        $("#incorrect4").css("background-color", "red");
+        
+    });
+
+    $("#incorrect4").click(function () {
+        incorrectAnswers++;
+        console.log("incorrect: " + incorrectAnswers);
+        $("#correct4").css("background-color", "green");
+        $("#incorrect4").css("background-color", "red");
+
+
+
+    });
+
+    $("#correct5").click(function () {
+        correctAnswers++;
+        console.log("correct: " + correctAnswers);
+        $("#correct5").css("background-color", "green");
+        $("#incorrect5").css("background-color", "red");
+        
+    });
+
+    $("#incorrect5").click(function () {
+        incorrectAnswers++;
+        console.log("incorrect: " + incorrectAnswers);
+        $("#correct5").css("background-color", "green");
+        $("#incorrect5").css("background-color", "red");
+
+    });
+
+    $("#correct6").click(function () {
+        correctAnswers++;
+        console.log("correct: " + correctAnswers);
+        $("#correct6").css("background-color", "green");
+        $("#incorrect6").css("background-color", "red");
+        
+    });
+
+    $("#incorrect6").click(function () {
+        incorrectAnswers++;
+        console.log("incorrect: " + incorrectAnswers);
+        $("#correct6").css("background-color", "green");
+        $("#incorrect6").css("background-color", "red");
+
+    });
+
+
+
+    $("#correct7").click(function () {
+        correctAnswers++;
+        console.log("correct: " + correctAnswers);
+        $("#correct7").css("background-color", "green");
+        $("#incorrect7").css("background-color", "red");
+        
+    });
+
+    $("#incorrect7").click(function () {
+        incorrectAnswers++;
+        console.log("incorrect: " + incorrectAnswers);
+        $("#correct7").css("background-color", "green");
+        $("#incorrect7").css("background-color", "red");
+
+    });
+
+    $("#correct8").click(function () {
+        correctAnswers++;
+        console.log("correct: " + correctAnswers);
+        $("#correct8").css("background-color", "green");
+        $("#incorrect8").css("background-color", "red");
+        
+    });
+
+    $("#incorrect8").click(function () {
+        incorrectAnswers++;
+        console.log("incorrect: " + incorrectAnswers);
+        $("#correct8").css("background-color", "green");
+        $("#incorrect8").css("background-color", "red");
+
+    });
+
+    $("#submitButton").click(function () {
+        score ();
+        });
+
+
+      //  setTimeout(function score(), 3000);
 
 
 
 
 });
+
 

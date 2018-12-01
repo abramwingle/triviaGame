@@ -19,7 +19,7 @@ body {
     margin-right: auto;
 }
 
-.question, .correctQuestion {
+.incorrectQuestion, .correctQuestion {
     background-color: darkblue;
     color: peachpuff;
     width: 12%;
@@ -44,8 +44,8 @@ body {
 .questionDisplays {
     display: flex;
     flex-direction: row;
-    background-color: yellow;
-    width: 70%;
+    
+    width: 50%;
     margin-left: auto;
     margin-right: auto;
     
@@ -56,7 +56,12 @@ body {
    line-height: 30px;
 }
 
-
+.correctQuestion:hover{
+    background-color: black;    
+}
+.incorrectQuestion:hover {
+    background-color: black;
+}
 
 
 
