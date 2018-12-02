@@ -7,8 +7,7 @@ var sec = 60;
 function score() {
     $("#submitButton").text("Reset");
 
-    document.getElementById("quizDisplay").innerHTML = ("You got " + correctAnswers + " correct answers and "
-        + incorrectAnswers + " incorrect answers");
+    document.getElementById("quizDisplay").innerHTML = ("You got " + correctAnswers + "/8 which is " + (correctAnswers/8 * 100) + "%");
     document.getElementById("quizDisplay").style.fontSize = "50px";
     document.getElementById("quizDisplay").style.width = "40%";
     document.getElementById("quizDisplay").style.backgroundColor = "white";
@@ -46,6 +45,8 @@ $(document).ready(function () {
             console.log("correct: " + correctAnswers);
             $("#correct1").css("background-color", "green");
             $("#incorrect1").css("background-color", "red");
+            $('#incorrect1').off('click');
+
 
         });
 
@@ -54,6 +55,8 @@ $(document).ready(function () {
             console.log("incorrect: " + incorrectAnswers);
             $("#correct1").css("background-color", "green");
             $("#incorrect1").css("background-color", "red");
+            $('#correct1').off('click');
+
 
         });
 
@@ -62,6 +65,8 @@ $(document).ready(function () {
             console.log("correct: " + correctAnswers);
             $("#correct2").css("background-color", "green");
             $("#incorrect2").css("background-color", "red");
+            $('#incorrect2').off('click');
+
 
         });
 
@@ -70,6 +75,8 @@ $(document).ready(function () {
             console.log("incorrect: " + incorrectAnswers);
             $("#correct2").css("background-color", "green");
             $("#incorrect2").css("background-color", "red");
+            $('#correct2').off('click');
+
 
         });
 
@@ -80,6 +87,8 @@ $(document).ready(function () {
             console.log("correct: " + correctAnswers);
             $("#correct3").css("background-color", "green");
             $("#incorrect3").css("background-color", "red");
+            $('#incorrect3').off('click');
+
 
         });
 
@@ -88,6 +97,8 @@ $(document).ready(function () {
             console.log("incorrect: " + incorrectAnswers);
             $("#correct3").css("background-color", "green");
             $("#incorrect3").css("background-color", "red");
+            $('#correct3').off('click');
+
 
         });
 
@@ -96,6 +107,7 @@ $(document).ready(function () {
             console.log("correct: " + correctAnswers);
             $("#correct4").css("background-color", "green");
             $("#incorrect4").css("background-color", "red");
+            $('#incorrect4').off('click');
 
         });
 
@@ -104,6 +116,8 @@ $(document).ready(function () {
             console.log("incorrect: " + incorrectAnswers);
             $("#correct4").css("background-color", "green");
             $("#incorrect4").css("background-color", "red");
+            $('#correct4').off('click');
+
 
 
 
@@ -114,6 +128,8 @@ $(document).ready(function () {
             console.log("correct: " + correctAnswers);
             $("#correct5").css("background-color", "green");
             $("#incorrect5").css("background-color", "red");
+            $('#incorrect5').off('click');
+
 
         });
 
@@ -122,6 +138,8 @@ $(document).ready(function () {
             console.log("incorrect: " + incorrectAnswers);
             $("#correct5").css("background-color", "green");
             $("#incorrect5").css("background-color", "red");
+            $('#correct5').off('click');
+
 
         });
 
@@ -130,6 +148,8 @@ $(document).ready(function () {
             console.log("correct: " + correctAnswers);
             $("#correct6").css("background-color", "green");
             $("#incorrect6").css("background-color", "red");
+            $('#incorrect6').off('click');
+
 
         });
 
@@ -138,6 +158,8 @@ $(document).ready(function () {
             console.log("incorrect: " + incorrectAnswers);
             $("#correct6").css("background-color", "green");
             $("#incorrect6").css("background-color", "red");
+            $('#correct6').off('click');
+
 
         });
 
@@ -148,6 +170,8 @@ $(document).ready(function () {
             console.log("correct: " + correctAnswers);
             $("#correct7").css("background-color", "green");
             $("#incorrect7").css("background-color", "red");
+            $('#incorrect7').off('click');
+
 
         });
 
@@ -156,6 +180,8 @@ $(document).ready(function () {
             console.log("incorrect: " + incorrectAnswers);
             $("#correct7").css("background-color", "green");
             $("#incorrect7").css("background-color", "red");
+            $('#correct7').off('click');
+
 
         });
 
@@ -164,6 +190,8 @@ $(document).ready(function () {
             console.log("correct: " + correctAnswers);
             $("#correct8").css("background-color", "green");
             $("#incorrect8").css("background-color", "red");
+            $('#incorrect8').off('click');
+
 
         });
 
@@ -172,6 +200,8 @@ $(document).ready(function () {
             console.log("incorrect: " + incorrectAnswers);
             $("#correct8").css("background-color", "green");
             $("#incorrect8").css("background-color", "red");
+            $('#correct8').off('click');
+
 
         });
 
